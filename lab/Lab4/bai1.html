@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var main = [];
+      function item(name, model, cost, quantity) {
+        this.name = name;
+        this.model = model;
+        this.cost = cost;
+        this.quantity = quantity;
+      }
+      item1 = new item("Sản Phẩm 1", "Iphone", 18000000, 18); // khởi tạo đối tượng item chuyền tham số vào và gán cho item1
+      item2 = new item("Sản Phẩm 2", "SamSung", 13000000, 13); // khởi tạo đối tượng item chuyền tham số vào và gán cho item2
+      item3 = new item("Sản Phẩm 3", "Nokia", 9000000, 9); // khởi tạo đối tượng item chuyền tham số vào và gán cho item3
+      main.push(item1, item2, item3); // thêm item1,2,3 vào cuối mảng main đã được khai báo trước đó
+      console.log(main); // hiển thị các phần tử trong mảng main
+      console.log(main[2].quantity); // truy suất đến item3 và lấy ra thuộc tính quantity để in ra console.log
+      item4 = new item("Sản Phẩm 4", "Mac", 29000000, 29); // khởi tạo đối tượng item chuyền tham số vào và gán cho item4
+      main.push(item4); // thêm item4 vào cuối mảng main đã được khai báo trước đó
+      console.log(main[3].model); // truy suất đến item4 và lấy ra thuộc tính model để in ra console.log
+    </script>
+  </body>
+</html>

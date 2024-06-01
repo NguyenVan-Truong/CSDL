@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="button" value="Mở cửa sổ mới" onclick="taoCuaSoNew();" />
+    <input type="button" value="Đóng cửa sổ mới" onclick="dongCuaSo();" />
+    <input
+      type="button"
+      value="Kiểm tra cửa sổ mới đã đóng hay trưa"
+      onclick="check();"
+    />
+    <script>
+      var x;
+      function taoCuaSoNew() {
+        x = window.open(
+          "http://127.0.0.1:5500/Lab4/bai4.html",
+          "Google Chrome",
+          "toolbar = yes",
+          "menu = yes",
+          "width =800",
+          "height = 600"
+        );
+      }
+      function dongCuaSo() {
+        x = window.close();
+      }
+      function check() {
+        if (x.closed) {
+          alert("Cửa sổ đã được đóng");
+        } else {
+          alert("Cửa sổ chưa được đóng");
+        }
+      }
+    </script>
+  </body>
+</html>

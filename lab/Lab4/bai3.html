@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      setTimeout(() => {
+        var x = new Date();
+        var gio = x.getHours();
+        var phut = x.getMinutes();
+        var giay = x.getSeconds();
+        document.write(gio + " Giờ  " + phut + "  Phút  " + giay + " Giây ");
+        location.reload(); // loads lại document trang hiện tại
+      }, 1000); // sau 1 giây thì setTimeout sẽ được thực hiện 1 lần
+    </script>
+  </body>
+</html>

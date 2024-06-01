@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="button" value="Hiển thị" onclick="sv.hienThi();" />
+    <script>
+      function SinhVien(hoTen, diem) {
+        this.hoTen = hoTen;
+        this.diem = diem;
+        this.hienThi = function () {
+          document.write("Họ tên: " + this.hoTen + "<br/>");
+          document.write("Điểm: " + this.diem + "<br/>");
+          if (this.diem >= 5) {
+            document.write("Học lực đậu");
+          } else {
+            document.write("Học lực rớt");
+          }
+        };
+      }
+      var sv = new SinhVien();
+      sv.hoTen = prompt("Nhập họ tên: ");
+      sv.diem = prompt("Nhập điểm: ");
+    </script>
+  </body>
+</html>
